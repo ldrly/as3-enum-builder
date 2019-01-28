@@ -1,0 +1,20 @@
+final class <%= name %> {
+<% _.forEach(values, (value,i) => { %>
+	public static function get <%= _.snakeCase(value).toUpperCase() %>():<%= name %> { return new <%= name %>(<%= i++ %>, "<%= value %>", new Z()); }
+<% }); %>
+
+	private var _value:int;
+	public function get value():int { return _value; }
+
+	private var _description:String;
+	public function get description():String { return _description; }
+
+	public function <%= name %>(value:int, description:String, _:Z)
+	{
+		this._value = value;
+		this._description = description;
+	}
+
+	public function toString() { return _description; }
+}
+class Z {}

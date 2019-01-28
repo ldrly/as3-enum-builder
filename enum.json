@@ -1,0 +1,8 @@
+{
+	"name": "OsEnum",
+	"values": [
+		"Mac",
+		"Windows",
+		"Linux"
+	]
+}

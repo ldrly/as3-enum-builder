@@ -1,0 +1,11 @@
+{
+  "name": "as3-enum-builder",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "run": "main.js"
+  },
+  "dependencies": {
+    "lodash": "*"
+  }
+}
