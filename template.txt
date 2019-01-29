@@ -1,6 +1,6 @@
 final class <%= name %> {
 <% _.forEach(values, (value,i) => { %>
-	public static function get <%= _.snakeCase(value).toUpperCase() %>():<%= name %> { return new <%= name %>(<%= i++ %>, "<%= value %>", new Z()); }
+	public static function get <%= _.snakeCase(value).toUpperCase() %>():<%= name %> { return new <%= name %>(<%= i %>, "<%= value %>", new Z()); }
 <% }); %>
 
 	private var _value:int;
