@@ -15,6 +15,6 @@ final class <%= name %> {
 		this._description = description;
 	}
 
-	public function toString() { return _description; }
+	public function toString():String { return _description; }
 }
 class Z {}
