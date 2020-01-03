@@ -1,10 +1,11 @@
 ## Usage
 
-`npm install` once to install.
+`npm install -g https://github.com/ldrly/as3-enum-builder.git` once to install, and use the `as3enum` commandline tool.
+Or clone this repository and `npm install`, `npm link` to add `as3enum` to your path.
 
-Edit `enum.json` to describe the desired enum.
+Edit `enum.json` to describe the desired enum, or provide your own file. Use of the `.enumdef` file extension is optional.
 
-Run `node main.js` to generate the code.
+Run `as3enum [file.enumdef]` to generate the code.
 
 ## Sample
 

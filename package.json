@@ -5,6 +5,9 @@
   "scripts": {
     "run": "main.js"
   },
+  "bin": {
+    "as3enum": "./main.js"
+  },
   "dependencies": {
     "lodash": "*"
   }
