@@ -7,13 +7,6 @@ final class <%= name %> {
 	public static const <%= _.snakeCase(value).toUpperCase() %>:<%= name %> = new <%= name %>(<%= i %>, "<%= value %>", new Z());
 <% }); %>
 
-	private var _value:int;
-	public function get value():int { return _value; }
-
-	private var _description:String;
-	public function get description():String { return _description; }
-
-
 	private static const _all:Vector.<<%= name %>> = new <<%= name %>>[<% _.forEach(values, (value) => { %><%= _.snakeCase(value).toUpperCase() %>, <% }) %>];
 
 	public static function fromValue(i:int):<%= name %>
@@ -34,6 +27,11 @@ final class <%= name %> {
 		return null;
 	}
 
+	private var _value:int;
+	public function get value():int { return _value; }
+
+	private var _description:String;
+	public function get description():String { return _description; }
 
 	public function <%= name %>(value:int, description:String, _:Z)
 	{

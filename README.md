@@ -47,13 +47,6 @@ final class OsEnum {
 	public static const LINUX:OsEnum = new OsEnum(2, "Linux", new Z());
 
 
-	private var _value:int;
-	public function get value():int { return _value; }
-
-	private var _description:String;
-	public function get description():String { return _description; }
-
-
 	private static const _all:Vector.<OsEnum> = new <OsEnum>[MAC, WINDOWS, LINUX, ];
 
 	public static function fromValue(i:int):OsEnum
@@ -74,6 +67,11 @@ final class OsEnum {
 		return null;
 	}
 
+	private var _value:int;
+	public function get value():int { return _value; }
+
+	private var _description:String;
+	public function get description():String { return _description; }
 
 	public function OsEnum(value:int, description:String, _:Z)
 	{
