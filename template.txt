@@ -3,11 +3,12 @@
  * @see https://github.com/ldrly/as3-enum-builder
  */
 final class <%= name %> {
-<% _.forEach(values, (value,i) => { %>
-	public static const <%= _.snakeCase(value).toUpperCase() %>:<%= name %> = new <%= name %>(<%= i %>, "<%= value %>", new Z());
-<% }); %>
+	private static var _sealed:Boolean = false;
+	private static const _all:Vector.<<%= name %>> = new <<%= name %>>[];
 
-	private static const _all:Vector.<<%= name %>> = new <<%= name %>>[<% _.forEach(values, (value) => { %><%= _.snakeCase(value).toUpperCase() %>, <% }) %>];
+<% _.forEach(values, (value,i) => { %>
+	public static const <%= _.snakeCase(value).toUpperCase() %>:<%= name %> = new <%= name %>(<%= i %>, "<%= value %>");
+<% }); %>
 
 	public static function fromValue(i:int):<%= name %>
 	{
@@ -33,12 +34,15 @@ final class <%= name %> {
 	private var _description:String;
 	public function get description():String { return _description; }
 
-	public function <%= name %>(value:int, description:String, _:Z)
+	function <%= name %>(value:int, description:String)
 	{
+		if (_sealed) throw new TypeError("Enum is sealed");
 		this._value = value;
 		this._description = description;
+		_all.push(this);
 	}
 
 	public function toString():String { return _description; }
+
+	_sealed = true;
 }
-class Z {}
