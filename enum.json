@@ -1,5 +1,6 @@
 {
 	"name": "OsEnum",
+	"package": "com.example",
 	"values": [
 		"Mac",
 		"Windows",
