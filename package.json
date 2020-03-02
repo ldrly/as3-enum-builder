@@ -1,12 +1,12 @@
 {
   "name": "as3-enum-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "main.js",
   "scripts": {
     "run": "main.js"
   },
   "bin": {
-    "as3enum": "./main.js"
+    "as3enum": "./bin/as3enum"
   },
   "dependencies": {
     "lodash": "*"
